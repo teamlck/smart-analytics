@@ -1,0 +1,37 @@
+{
+  "name": "@norux/smart-analytics",
+  "version": "0.1.2",
+  "description": "Smart analytics for web page",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack-cli --config conf/webpack.prod.conf.js",
+    "dev": "webpack-dev-server --config conf/webpack.dev.conf.js --hot --inline",
+    "start": "npm run dev",
+    "lint": "eslint --ext .js src test",
+    "test": "npm run lint",
+    "prepublish": "npm run build"
+  },
+  "author": "norux <andrew@norux.me>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/norux/smart-analytics"
+  },
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "babel-loader": "^8.0.0",
+    "eslint": "^5.4.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.6"
+  },
+  "dependencies": {
+    "@babel/core": "^7.0.0"
+  }
+}
