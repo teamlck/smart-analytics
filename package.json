@@ -18,6 +18,8 @@
     "url": "https://github.com/norux/smart-analytics"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.0",
     "eslint": "^5.4.0",
