@@ -3,17 +3,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './test/app.js',
+  entry: './examples/client/app.js',
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist')
   },
   devtool: 'cheap-module-source-map',
   devServer: {
-    contentBase: "./test",
+    contentBase: "./examples/client",
     hot: true,
     inline: true,
-    progress: true
+    progress: true,
+    proxy: {
+      '/api': 'http://localhost:8000'
+    }
   },
   module: {
     rules: [
@@ -26,7 +29,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './test/index.html'
+      template: './examples/client/index.html'
     })
   ]
 };
