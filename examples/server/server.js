@@ -15,6 +15,7 @@ http.createServer((request, response) => {
       body = body.toString()
 
       switch (method) {
+        case 'POST':
         case 'PUT':
           console.log(body)
           break
