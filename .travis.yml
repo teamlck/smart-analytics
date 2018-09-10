@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- "node"
+
+sudo: false
+
+env:
+- NODE_ENV=test
+
+cache:
+  directories:
+  - node_modules
+
+script:
+- "npm run test"
