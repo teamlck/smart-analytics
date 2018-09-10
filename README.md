@@ -8,3 +8,6 @@ Smart analytics provide more rich data from web page.
 $ npm install smart-analytics
 ```
 
+## Contribution
+
+* slack: https://wetogether-group.slack.com/
