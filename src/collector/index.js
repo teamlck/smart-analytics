@@ -1,4 +1,4 @@
-import { Collector } from './Collector'
+import { Collector } from './collector'
 
 export {
   Collector

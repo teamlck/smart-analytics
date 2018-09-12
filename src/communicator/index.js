@@ -1,4 +1,4 @@
-import { Communicator } from './Communicator'
+import { Communicator } from './communicator'
 
 export {
   Communicator
