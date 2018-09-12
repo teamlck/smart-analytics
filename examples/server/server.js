@@ -28,6 +28,7 @@ http.createServer((request, response) => {
       }
       response.setHeader('Access-Control-Allow-Origin', '*')
       response.setHeader('Access-Control-Allow-Methods', 'POST, PUT')
+      response.setHeader('Access-Control-Allow-Headers', 'Origin, Content-Type, Accept')
       response.end('success\n')
     })
 }).listen(port, host, () => {

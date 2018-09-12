@@ -1,5 +1,10 @@
+import { Store } from './store'
 import { Collector } from './collector'
+import { TouchEventCollector } from './events/touch'
 
 export {
-  Collector
+  Store,
+
+  Collector,
+  TouchEventCollector
 }

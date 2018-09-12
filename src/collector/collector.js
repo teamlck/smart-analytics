@@ -1,7 +1,32 @@
 export class Collector {
-  constructor () {
-    this.save()
+  constructor (store) {
+    // This class CANNOT be instance
+    if (new.target === Collector) {
+      throw new TypeError('Cannot construct \'Collector\' instances directly')
+    }
+
+    // Abstract methods
+    if (this.registerEvent === undefined) {
+      throw new TypeError('Must override abstract method \'registerEvent\'')
+    }
+
+    this.registerEvent()
+
+    this.name = this.constructor.name
+    this.store = store
   }
 
-  save () { }
+  registerEvent () { /* Abstract method */ }
+
+  on (event, callback) {
+    document.addEventListener(event, callback, false)
+  }
+
+  off (event, callback) {
+    document.removeEventListener(event, callback)
+  }
+
+  save (data) {
+    this.store.save(this.name, data)
+  }
 }
