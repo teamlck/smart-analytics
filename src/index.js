@@ -1,3 +1,3 @@
-import { SmartAnalytics } from './SmartAnlytics'
+import { SmartAnalytics } from './smartAnlytics'
 
 export { SmartAnalytics }

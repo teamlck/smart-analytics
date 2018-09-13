@@ -17,6 +17,8 @@ export class Communicator {
   }
 
   send (data) {
+    if (!data || Object.keys(data).length === 0) return
+
     // TODO: Need to normalize data before send()
     // this.normalize(data)
 
