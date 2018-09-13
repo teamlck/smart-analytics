@@ -1,6 +1,6 @@
 {
-  "name": "@norux/smart-analytics",
-  "version": "0.1.2",
+  "name": "@teamlck/smart-analytics",
+  "version": "0.0.1",
   "description": "Smart analytics for web page",
   "main": "src/index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/norux/smart-analytics"
+    "url": "https://github.com/teamlck/smart-analytics"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
