@@ -1,12 +1,16 @@
 import { Communicator } from './communicator'
-import { Store, TouchEventCollector } from './collector'
+import {
+  Store,
+  ClickEventCollector,
+  TouchEventCollector
+} from './collector'
 
 export class SmartAnalytics {
   constructor (opt) {
     let defaults = {
       interval: 3000,
       serverInfo: {},
-      collect: ['touch']
+      collect: ['click', 'touch']
     }
 
     this.opt = {
@@ -23,6 +27,7 @@ export class SmartAnalytics {
   collectorFactory () {
     this.opt.collect.map(collect => {
       switch (collect) {
+        case 'click': return ClickEventCollector
         case 'touch': return TouchEventCollector
         default: break
       }
