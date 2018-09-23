@@ -22,7 +22,5 @@ export class ResizeEventCollector extends Collector {
     }
 
     this.save(this.cache)
-
-    this.cache = {}
   }
 }

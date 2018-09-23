@@ -21,7 +21,6 @@ export class Communicator {
 
     // TODO: Need to normalize data before send()
     // this.normalize(data)
-    console.log(data)
 
     axios({
       url: this.opt.url,
