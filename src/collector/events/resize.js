@@ -3,8 +3,6 @@ import { Collector } from '../collector'
 export class ResizeEventCollector extends Collector {
   constructor (store) {
     super(store)
-
-    this.cache = {}
   }
 
   registerEvent () {
@@ -12,15 +10,13 @@ export class ResizeEventCollector extends Collector {
   }
 
   resize (e) {
-    this.cache.resize = {
+    this.save({
       time: Date.now(),
       outerWidth: outerWidth,
       outerHeight: outerHeight,
       innerWidth: innerWidth,
       innerHeight: innerHeight,
       type: e.type
-    }
-
-    this.save(this.cache)
+    })
   }
 }
