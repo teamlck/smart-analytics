@@ -2,7 +2,8 @@ import { Communicator } from './communicator'
 import {
   Store,
   ClickEventCollector,
-  TouchEventCollector
+  TouchEventCollector,
+  ScrollEventCollector
 } from './collector'
 
 export class SmartAnalytics {
@@ -10,7 +11,7 @@ export class SmartAnalytics {
     let defaults = {
       interval: 3000,
       serverInfo: {},
-      collect: ['click', 'touch']
+      collect: ['click', 'touch', 'scroll']
     }
 
     this.opt = {
@@ -29,6 +30,7 @@ export class SmartAnalytics {
       switch (collect) {
         case 'click': return ClickEventCollector
         case 'touch': return TouchEventCollector
+        case 'scroll': return ScrollEventCollector
         default: break
       }
     }).forEach(Collector => new Collector(this.store))
