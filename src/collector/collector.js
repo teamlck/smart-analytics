@@ -19,11 +19,11 @@ export class Collector {
   registerEvent () { /* Abstract method */ }
 
   on (event, callback) {
-    document.addEventListener(event, callback, false)
+    window.addEventListener(event, callback, false)
   }
 
   off (event, callback) {
-    document.removeEventListener(event, callback)
+    window.removeEventListener(event, callback)
   }
 
   save (data) {
