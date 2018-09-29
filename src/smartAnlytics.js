@@ -3,7 +3,8 @@ import {
   Store,
   ClickEventCollector,
   TouchEventCollector,
-  ResizeEventCollector
+  ResizeEventCollector,
+  ScrollEventCollector
 } from './collector'
 
 export class SmartAnalytics {
@@ -11,7 +12,7 @@ export class SmartAnalytics {
     let defaults = {
       interval: 3000,
       serverInfo: {},
-      collect: ['click', 'touch', 'resize']
+      collect: ['click', 'touch', 'resize', 'scroll']
     }
 
     this.opt = {
@@ -31,6 +32,7 @@ export class SmartAnalytics {
         case 'click': return ClickEventCollector
         case 'touch': return TouchEventCollector
         case 'resize': return ResizeEventCollector
+        case 'scroll': return ScrollEventCollector
         default: break
       }
     }).forEach(Collector => new Collector(this.store))
