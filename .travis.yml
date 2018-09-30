@@ -23,5 +23,5 @@ notifications:
     rooms:
     - teamlck:xi2Cxwj6ryvcaGKZFjfywbkR#smart-analytics
     - teamlck:xi2Cxwj6ryvcaGKZFjfywbkR#travis-ci
-    on_success: change # default
-    on_failure: always # default
+    on_success: always
+    on_failure: always
