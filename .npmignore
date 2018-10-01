@@ -1,8 +1,8 @@
 .DS_Store
 node_modules
 
-# TODO include src later
-# src
+# src is not needed
+src
 
 # Log files
 npm-debug.log*
