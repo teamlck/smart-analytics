@@ -3,6 +3,7 @@ import { Collector } from './collector'
 import { ClickEventCollector } from './events/click'
 import { TouchEventCollector } from './events/touch'
 import { ResizeEventCollector } from './events/resize'
+import { ScrollEventCollector } from './events/scroll'
 
 export {
   Store,
@@ -10,5 +11,6 @@ export {
   Collector,
   ClickEventCollector,
   TouchEventCollector,
-  ResizeEventCollector
+  ResizeEventCollector,
+  ScrollEventCollector
 }
